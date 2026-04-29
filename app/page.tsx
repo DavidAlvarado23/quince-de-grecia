@@ -54,16 +54,15 @@ export default function Home() {
         className="lg:hidden container w-full h-[100dvh] flex flex-row justify-center items-center"
         style={{
           backgroundImage:
-            "linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url('/images/fairytale-invitation-bg.png')",
+            "linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url('/images/fairytale-invitation-bg.png')",
           backgroundAttachment: "fixed",
           backgroundSize: "cover",
           backgroundPositionX: "50%",
         }}
       >
         <div className="max-w-[80%] flex flex-col items-center justify-center">
-          <div className="min-h-[10dvh]">&nbsp;</div>
           <p
-            className="font-(family-name:--font-cormorant) text-[1.1em] font-bold leading-[100%] pt-5 pb-5 italic text-center"
+            className="font-(family-name:--font-cormorant) text-[1em] font-bold leading-[100%] pt-5 pb-10 uppercase text-center"
             style={{ textShadow: "1px 1px 20px white" }}
           >
             Como en un cuento de hadas, hay momentos que marcan nuestra
@@ -77,23 +76,34 @@ export default function Home() {
             Con la bendición de Dios
             <br />y el amor de mis padres,
           </p>
-          <h2 className="font-(family-name:--font-tangerine) text-[2.3em] text-(--ink-soft) leading-[90%] text-center p-5">
-            Jaime Hernandez y
-            <br />
-            Rubia de Hernández
-          </h2>
-          <p className="font-(family-name:--font-cormorant) text-[1.2em] italic leading-[100%] text-center mb-5 pl-5 pr-5">
-            tengo el honor de invitarte a celebrar
+          <div className="flex flex-row p-5 gap-5 pb-10">
+            <h2 className="font-(family-name:--font-tangerine) text-[2.3em] text-(--ink-soft) leading-[80%] text-center ">
+              Jaime Hernandez
+            </h2>
+            <h2 className="font-(family-name:--font-tangerine) text-[2.3em] text-(--ink-soft) leading-[80%] text-center">
+              Rubia de Hernández
+            </h2>
+          </div>
+          <p className="font-(family-name:--font-cormorant) text-[1.1em] italic leading-[100%] text-center mb-5 pl-5 pr-5">
+            tengo el honor de invitarte a celebrar mis
           </p>
-          <h5 className="font-(family-name:--font-cormorant) text-[1.1em] text-(--ink-soft) leading-[100%] tracking-[-3%] text-center mb-2">
-            MIS XV AÑOS
+          <h5 className="font-(family-name:--font-cormorant) text-[1.5em] font-bold text-(--ink-soft) leading-[100%] tracking-[-3%] text-center mb-2">
+            XV AÑOS
           </h5>
-          <h1 className="font-(family-name:--font-tangerine) text-[5em] text-(--ink-soft) leading-[60%] tracking-[-3%] text-center pl-5 pr-5 pb-5">
+          <h1 className="font-(family-name:--font-tangerine) text-[5.5em] text-(--ink-soft) leading-[60%] tracking-[-3%] text-center pl-5 pr-5 pb-5">
             Grecia Hernández
           </h1>
-          <p className="font-(family-name:--font-cormorant) text-[1.4em] font-bold text-center pl-5 pr-5 mt-5">
-            Sábado 16 de mayo de 2026
-          </p>
+          <div className="flex flex-row items-center justify-center gap-2 pl-5 pr-5 mt-5">
+            <p className="font-(family-name:--font-cormorant) text-[1.5em] font-bold text-center ">
+              Sábado
+            </p>
+            <p className="font-(family-name:--font-montserrat) text-[2.5em] text-center ">
+              16
+            </p>
+            <p className="font-(family-name:--font-cormorant) text-[1.5em] font-bold text-center">
+              mayo
+            </p>
+          </div>
           <div className="mb-[3vh] md:w-[40%] w-[70vw]">
             <Button
               variant="outlined"
@@ -107,13 +117,16 @@ export default function Home() {
                 fontWeight: "bold",
                 padding: "5px",
                 borderRadius: "50px",
-                borderColor: "var(--ink-soft)"
+                borderColor: "var(--ink-soft)",
               }}
               onClick={onRsvp}
               startIcon={<CheckIcon />}
             >
               Confirmar asistencia
             </Button>
+            <p className="font-(family-name:--font-cormorant) font-bold italic text-[0.9em] leading-[70%] mt-2 tracking-[-2%] text-center">
+              Por favor, confirmar antes del 2 de mayo
+            </p>
           </div>
         </div>
       </div>
@@ -156,14 +169,11 @@ export default function Home() {
         &nbsp;
       </div>
       <div className="pt-7 pr-7 pl-7 pb-3">
-        <h4 className="font-(family-name:--font-tangerine) text-[4em] leading-[40%] mt-5">
+        <h4 className="font-(family-name:--font-tangerine) text-[4em] leading-[40%] mt-5 mb-5">
           Ubicación
         </h4>
-        <p className="font-(family-name:--font-cormorant) font-bold italic text-[0.9em] tracking-[-2%] mb-5">
-          Haz clic en la dirección para abrir el mapa
-        </p>
         <div
-          className="flex flex-col items-start mb-5"
+          className="flex flex-col items-start mb-7"
           onClick={() =>
             window.open("https://maps.app.goo.gl/gjdQcKA2YHtSVdkP9", "_blank")
           }
@@ -172,8 +182,13 @@ export default function Home() {
             Misa de Acción de Gracias
           </h4>
           <div className="flex flex-row gap-5 items-center justify-center w-full">
-            <LocationOnIcon />
-            <p className="font-(family-name:--font-cormorant) text-[1.2em]">
+            <div className="flex flex-col items-center">
+              <LocationOnIcon />
+              <p className="font-(family-name:--font-cormorant) font-bold italic text-[0.9em] leading-[70%] mt-1 tracking-[-2%] text-center">
+                Ver ubicación
+              </p>
+            </div>
+            <p className="font-(family-name:--font-cormorant) text-[1.2em] leading-[90%]">
               Parroquia Corazón de María
             </p>
             <p className="font-(family-name:--font-cormorant) text-[1.5em] leading-[80%] font-bold text-center justify-self-end">
@@ -194,8 +209,13 @@ export default function Home() {
           </h4>
 
           <div className="flex flex-row gap-5 items-center justify-center w-full">
-            <LocationOnIcon />
-            <p className="font-(family-name:--font-cormorant) text-[1.2em]">
+            <div className="flex flex-col items-center">
+              <LocationOnIcon />
+              <p className="font-(family-name:--font-cormorant) font-bold italic text-[0.9em] leading-[70%] mt-1 tracking-[-2%] text-center">
+                Ver ubicación
+              </p>
+            </div>
+            <p className="font-(family-name:--font-cormorant) text-[1.2em] leading-[90%]">
               Hotel Sheraton Presidente
             </p>
             <p className="font-(family-name:--font-cormorant) text-[1.5em] leading-[80%] font-bold text-center justify-self-end">
