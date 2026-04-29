@@ -1,0 +1,394 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #063b63;
+  --ink-soft: #2f89c8;
+  --ice: #e6f6ff;
+  --silver: rgba(109, 159, 190, 0.36);
+  --paper: rgba(246, 253, 255, 0.58);
+}
+
+@theme {
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+}
+
+body {
+  color: var(--ink);
+}
+
+.countdown-section {
+  margin-top: 0.62rem;
+}
+
+@components {
+  .countdown-title {
+    margin: 0 0 0.38rem;
+    font-size: clamp(2.25rem, 6vw, 3.4rem);
+    font-style: normal;
+    letter-spacing: 0;
+    color: #fff;
+    text-shadow:
+      0 0.08rem 0 #ffffff,
+      0 0 0.9rem rgba(255, 255, 255, 0.86);
+  }
+}
+
+.countdown-wrapper {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  margin-inline: auto;
+}
+
+.fairytale-countdown {
+  max-width: 100%;
+  min-width: 0;
+  flex-wrap: nowrap;
+  justify-content: center;
+  --fcc-spacing: clamp(0.25rem, 1.1vw, 0.6rem);
+  --fcc-digit-block-spacing: clamp(0.08rem, 0.5vw, 0.22rem);
+  --fcc-digit-block-width: clamp(1.55rem, 10vw, 2.45rem);
+  --fcc-digit-block-height: calc(var(--fcc-digit-block-width) * 1.34);
+  --fcc-digit-font-size: calc(var(--fcc-digit-block-width) * 0.72);
+  --fcc-label-font-size: clamp(0.55rem, 1.8vw, 0.78rem);
+  --fcc-digit-block-radius: 0.28rem;
+  --fcc-divider-height: 1px;
+  --fcc-label-margin-top: 0.25rem;
+}
+
+/*
+@theme inline {
+  --color-background: var(--ice);
+  --color-foreground: var(--ink);
+  --font-sans: Arial, Helvetica, sans-serif;
+  --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  background: var(--ice);
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+  background: #f3fbff;
+  color: var(--ink);
+  font-family: var(--story-serif);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.invitation-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 0;
+}
+
+.invitation {
+  position: relative;
+  width: 100%;
+  min-height: max(100svh, 78rem);
+  overflow: hidden;
+  isolation: isolate;
+  background:
+    linear-gradient(rgba(224, 245, 255, 0.08), rgba(224, 245, 255, 0.08)),
+    url("/images/fairytale-invitation-bg.png") center top / 100% 100% no-repeat;
+}
+
+.invitation::before {
+  content: "";
+  position: absolute;
+  inset: 12rem 13% 5.5rem;
+  z-index: -1;
+  border-radius: 50% / 12%;
+  background:
+    radial-gradient(ellipse at 50% 20%, rgba(255, 255, 255, 0.82), transparent 21rem),
+    linear-gradient(90deg, transparent, var(--paper) 16%, rgba(255, 255, 255, 0.72) 50%, var(--paper) 84%, transparent);
+  filter: blur(0.15rem);
+}
+
+.invitation::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 16% 22%, white 0 0.09rem, transparent 0.13rem),
+    radial-gradient(circle at 79% 18%, white 0 0.11rem, transparent 0.15rem),
+    radial-gradient(circle at 88% 43%, rgba(255, 255, 255, 0.96) 0 0.08rem, transparent 0.13rem),
+    radial-gradient(circle at 14% 62%, rgba(255, 255, 255, 0.94) 0 0.08rem, transparent 0.12rem),
+    radial-gradient(circle at 50% 91%, white 0 0.1rem, transparent 0.15rem);
+  filter: drop-shadow(0 0 0.45rem white);
+}
+
+.invitation-content {
+  position: relative;
+  z-index: 1;
+  width: min(72%, 32rem);
+  padding-bottom: 1rem;
+  text-align: center;
+  text-wrap: balance;
+}
+
+.prologue,
+.blessing,
+.honor,
+.date,
+.event,
+.dress-code,
+.gift,
+.countdown-section {
+  font-family: var(--story-serif);
+  font-style: italic;
+  font-weight: 400;
+  line-height: 80;
+  color: var(--ink);
+  text-shadow:
+    0 0.05rem 0 rgba(255, 255, 255, 0.96),
+    0 0 0.75rem rgba(255, 255, 255, 0.78);
+}
+
+.prologue {
+  margin: 0;
+  font-size: clamp(1.18rem, 2.45vw, 1.6rem);
+  line-height: 1.48;
+}
+
+.flourish {
+  position: relative;
+  height: 2.25rem;
+  margin: 0.45rem auto 0.72rem;
+  color: var(--silver);
+}
+
+.flourish::before,
+.flourish::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 45%;
+  height: 0.08rem;
+  background: linear-gradient(90deg, transparent, currentColor);
+}
+
+.flourish::before {
+  left: 0;
+}
+
+.flourish::after {
+  right: 0;
+  transform: scaleX(-1);
+}
+
+.flourish {
+  background:
+    radial-gradient(circle at center, #2878ad 0 0.15rem, transparent 0.18rem),
+    radial-gradient(circle at 45% 50%, rgba(40, 120, 173, 0.58) 0 0.1rem, transparent 0.13rem),
+    radial-gradient(circle at 55% 50%, rgba(40, 120, 173, 0.58) 0 0.1rem, transparent 0.13rem);
+}
+
+.flourish-bottom {
+  margin-top: 0.75rem;
+}
+
+.blessing {
+  margin: 0;
+  font-size: clamp(1.34rem, 2.95vw, 1.8rem);
+  line-height: 1.35;
+}
+
+.parents {
+  margin: 0.4rem 0 0.7rem;
+  font-family: var(--story-script);
+  font-size: clamp(2.65rem, 7vw, 4rem);
+  line-height: 0.95;
+  color: #044873;
+  text-shadow:
+    0 0.08rem 0 white,
+    0 0 1rem rgba(255, 255, 255, 0.76);
+}
+
+.honor {
+  margin: 0;
+  font-size: clamp(1.06rem, 2.7vw, 1.4rem);
+}
+
+h1 {
+  margin: 0.18rem 0 0.08rem;
+  font-family: var(--story-script);
+  font-size: clamp(4.4rem, 12.5vw, 6.9rem);
+  font-weight: 400;
+  line-height: 0.8;
+  color: #003f67;
+  text-shadow:
+    0 0.1rem 0 #ffffff,
+    0 0 1.1rem rgba(255, 255, 255, 0.82);
+}
+
+h1 span {
+  display: block;
+  margin-bottom: 0.55rem;
+  font-size: clamp(3.15rem, 8.8vw, 4.95rem);
+}
+
+.bow {
+  position: relative;
+  width: 5.4rem;
+  height: 2rem;
+  margin: -0.15rem auto 0.25rem;
+  filter: drop-shadow(0 0.25rem 0.25rem rgba(14, 96, 151, 0.24));
+}
+
+.bow::before,
+.bow::after {
+  content: "";
+  position: absolute;
+  top: 0.36rem;
+  width: 2.2rem;
+  height: 1.32rem;
+  background: linear-gradient(135deg, #effcff, #67c4f5 52%, #f8fdff);
+  border: 0.08rem solid rgba(21, 107, 167, 0.32);
+}
+
+.bow::before {
+  left: 0.25rem;
+  border-radius: 100% 0.35rem 100% 0.35rem;
+  transform: rotate(-13deg);
+}
+
+.bow::after {
+  right: 0.25rem;
+  border-radius: 0.35rem 100% 0.35rem 100%;
+  transform: rotate(13deg);
+}
+
+.bow {
+  background: radial-gradient(circle at center, #86d3ff 0 0.42rem, #f8fdff 0.45rem 0.64rem, transparent 0.67rem);
+}
+
+.date {
+  margin: 0.18rem 0 0.45rem;
+  padding: 0.42rem 0;
+  border-block: 1px solid rgba(7, 63, 104, 0.18);
+  font-size: clamp(1.2rem, 3.2vw, 1.58rem);
+  font-weight: 600;
+}
+
+.events {
+  display: grid;
+  gap: 0.28rem;
+}
+
+.event {
+  padding-bottom: 0.42rem;
+  border-bottom: 1px solid rgba(7, 63, 104, 0.14);
+}
+
+.event h2,
+.event p,
+.event time,
+.dress-code p,
+.gift {
+  margin: 0;
+}
+
+.event h2 {
+  font: inherit;
+  font-size: clamp(1.18rem, 3.2vw, 1.62rem);
+}
+
+.event p,
+.event time {
+  display: block;
+  font-size: clamp(1.08rem, 2.8vw, 1.45rem);
+  line-height: 1.16;
+}
+
+.dress-code {
+  margin-top: 0.44rem;
+  font-size: clamp(0.94rem, 2.28vw, 1.2rem);
+}
+
+.dress-code small {
+  display: block;
+  margin-top: 0.08rem;
+  font-size: 0.78em;
+}
+
+.gift {
+  margin-top: 0.68rem;
+  padding-block: 0.48rem;
+  border-block: 1px solid rgba(7, 63, 104, 0.14);
+  font-size: clamp(1rem, 2.55vw, 1.27rem);
+}
+
+
+@media (max-width: 700px) {
+  .invitation {
+    min-height: max(100svh, 72rem);
+  }
+
+  .invitation::before {
+    inset: 8.8rem 7% 4.4rem;
+    background:
+      radial-gradient(ellipse at 50% 17%, rgba(255, 255, 255, 0.7), transparent 14rem),
+      linear-gradient(90deg, transparent, rgba(246, 253, 255, 0.54) 14%, rgba(255, 255, 255, 0.66) 50%, rgba(246, 253, 255, 0.54) 86%, transparent);
+  }
+
+  .parents {
+    font-size: clamp(2.45rem, 10vw, 3.2rem);
+  }
+
+  h1 {
+    font-size: clamp(4.15rem, 16vw, 5.35rem);
+  }
+
+  h1 span {
+    font-size: clamp(3rem, 12vw, 4rem);
+  }
+}
+
+@media (min-width: 701px) and (max-width: 1024px) {
+  .invitation {
+    min-height: max(100svh, 88rem);
+  }
+
+  .invitation-content {
+    width: min(70%, 34rem);
+    margin-top: 14rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  body {
+    background:
+      radial-gradient(circle at 50% 14%, rgba(255, 255, 255, 0.78), transparent 22rem),
+      linear-gradient(140deg, #bde7ff 0%, #eaf8ff 44%, #78bfeb 100%);
+  }
+
+  .invitation-page {
+    padding: clamp(0.65rem, 2.5vw, 2rem);
+  }
+
+  .invitation {
+    width: min(100%, 46rem);
+    min-height: 69rem;
+    box-shadow:
+      0 2rem 5rem rgba(37, 112, 158, 0.36),
+      inset 0 0 1.8rem rgba(255, 255, 255, 0.72);
+    background:
+      linear-gradient(rgba(224, 245, 255, 0.08), rgba(224, 245, 255, 0.08)),
+      url("/images/fairytale-invitation-bg.png") center / cover no-repeat;
+  }
+} */
