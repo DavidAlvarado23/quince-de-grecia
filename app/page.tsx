@@ -28,9 +28,9 @@ export default function Home() {
         style={{
           backgroundImage:
             "linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url('/images/fairytale-invitation-bg.png')",
-          backgroundAttachment: "fixed",
+          backgroundAttachment: "initial",
           backgroundSize: "cover",
-          backgroundPositionX: "50%",
+          backgroundPosition: "50% 0",
         }}
       >
         <div className="m-5 pr-5 pl-5 flex flex-col items-center justify-center border-5 border-ink-soft">
