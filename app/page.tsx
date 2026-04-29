@@ -51,7 +51,7 @@ export default function Home() {
           </p>
           <div className="flex flex-row p-5 gap-5 pb-10">
             <h2 className="font-(family-name:--font-tangerine) text-[2.3em] text-(--ink-soft) leading-[80%] text-center ">
-              Jaime Hernandez
+              Jaime Hernández
             </h2>
             <h2 className="font-(family-name:--font-tangerine) text-[2.3em] text-(--ink-soft) leading-[80%] text-center">
               Rubia de Hernández
@@ -68,7 +68,7 @@ export default function Home() {
           </h1>
           <div className="flex flex-row items-center justify-center gap-2 pl-5 pr-5 mt-5">
             <p className="font-(family-name:--font-cormorant) text-[1.5em] font-bold text-center ">
-              Sábado
+              sábado
             </p>
             <p className="font-(family-name:--font-montserrat) text-[2.5em] text-center ">
               16
