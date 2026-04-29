@@ -21,37 +21,10 @@ export default function Home() {
 
   return (
     <div className="flex flex-col items-center justify-center">
-      {/* Desktop layout */}
-      <div
-        className="hidden md:block w-full h-full flex flex-row justify-center items-center"
-        style={{
-          backgroundImage: image_path,
-          backgroundAttachment: "fixed",
-          backgroundSize: "cover",
-          backgroundPositionX: "50%",
-        }}
-      >
-        <div className="max-w-[40%]">
-          <p className="font-(family-name:--font-cormorant) font-[600] italic text-center">
-            Como en un cuento de hadas, hay momentos que marcan
-            <br />
-            nuestra historia... hoy comienza el mío y quiero que seas parte de
-            él
-          </p>
-
-          <p className="font-(family-name:--font-cormorant) italic text-center">
-            Con la bendición de Dios
-            <br />y el amor de mis padres,
-          </p>
-          <h2 className="font-(family-name:--font-tangerine) font-[400] text-center">
-            Jaime Hernandez<span>&nbsp;y&nbsp;</span>Rubia de Hernández
-          </h2>
-        </div>
-      </div>
       {/* Mobile layout */}
-      <div className="lg:hidden w-[92%] h-[95dvh] border-5 border-ink-soft absolute left-50% top-5" />
+      <div className="w-[92%] h-[95dvh] border-5 border-ink-soft absolute left-50% top-5" />
       <div
-        className="lg:hidden container w-full h-[100dvh] flex flex-row justify-center items-center"
+        className="w-full h-[100dvh] flex flex-row justify-center items-center"
         style={{
           backgroundImage:
             "linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url('/images/fairytale-invitation-bg.png')",
@@ -130,14 +103,15 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="lg:hidden w-[92%] h-[105dvh] border-l-5 border-r-5 border-white absolute left-50% top-[100dvh]" />
+      <div className="w-[92%] h-[105dvh] border-l-5 border-r-5 border-white absolute left-50% top-[100dvh]" />
       <div
-        className="h-[100dvh] lg:hidden w-full flex flex-col justify-end items-center p-5"
+        className="h-[100dvh] w-full flex flex-col justify-end items-center p-5"
         style={{
           backgroundImage: "url('/imagen_3.jpeg')",
           backgroundAttachment: "fixed",
           backgroundSize: "cover",
           backgroundPositionX: "50%",
+          backgroundPositionY: "65%",
         }}
       >
         &nbsp;
@@ -158,7 +132,7 @@ export default function Home() {
       </div>
 
       <div
-        className="h-[100dvh] lg:hidden w-full flex flex-col justify-end items-center p-5"
+        className="h-[100dvh] w-full flex flex-col justify-end items-center p-5"
         style={{
           backgroundImage: "url('/imagen_2.jpeg')",
           backgroundAttachment: "fixed",
@@ -169,7 +143,7 @@ export default function Home() {
         &nbsp;
       </div>
       <div className="pt-7 pr-7 pl-7 pb-3">
-        <h4 className="font-(family-name:--font-tangerine) text-[4em] leading-[40%] mt-5 mb-5">
+        <h4 className="font-(family-name:--font-tangerine) text-[4em] leading-[40%] mt-5 mb-5 text-center">
           Ubicación
         </h4>
         <div
@@ -235,25 +209,27 @@ export default function Home() {
         </div>
       </div>
       <div className="bg-ink-soft text-white w-full p-7">
-        <h4 className="font-(family-name:--font-tangerine) text-[3em] leading-[60%] mt-5">
-          Código de vestimenta
-        </h4>
-        <div className="flex flex-row gap-5">
-          <div>
-            <p className="font-(family-name:--font-cormorant) italic text-[1.3em] tracking-[-2%]">
-              Formal Elegante
-            </p>
-            <p className="font-(family-name:--font-cormorant) italic text-[1em]  tracking-[-2%]">
-              (El color celeste ha sido reservado para la quinceañera)
-            </p>
+        <div className="flex flex-col gap-2 justify-around items-center">
+          <h4 className="font-(family-name:--font-tangerine) text-[3em] text-left leading-[60%] mt-5">
+            Código de vestimenta
+          </h4>
+          <div className="flex flex-row gap-5">
+            <div>
+              <p className="font-(family-name:--font-cormorant) italic text-[1.3em] tracking-[-2%]">
+                Formal Elegante
+              </p>
+              <p className="font-(family-name:--font-cormorant) italic text-[1em]  tracking-[-2%]">
+                (El color celeste ha sido reservado para la quinceañera)
+              </p>
+            </div>
+            <Image
+              src="/images/fairytale-assets/slipper.png"
+              width={80}
+              height={50}
+              alt="Tacón"
+              style={{ transform: "scaleX(-1)" }}
+            />
           </div>
-          <Image
-            src="/images/fairytale-assets/slipper.png"
-            width={80}
-            height={50}
-            alt="Tacón"
-            style={{ transform: "scaleX(-1)" }}
-          />
         </div>
       </div>
       <div className="bg-white text-ink-soft w-full p-7">
@@ -275,12 +251,13 @@ export default function Home() {
         </div>
       </div>
       <div
-        className="h-[100dvh] lg:hidden w-full flex flex-col justify-end items-center p-5"
+        className="h-[100dvh] w-full flex flex-col justify-end items-center p-5"
         style={{
           backgroundImage: "url('/imagen_1.jpeg')",
           backgroundAttachment: "fixed",
           backgroundSize: "cover",
           backgroundPositionX: "50%",
+          backgroundPositionY: "25%",
         }}
       >
         &nbsp;
