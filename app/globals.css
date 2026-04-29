@@ -21,16 +21,12 @@ body {
   margin-top: 0.62rem;
 }
 
-@components {
-  .countdown-title {
-    margin: 0 0 0.38rem;
-    font-size: clamp(2.25rem, 6vw, 3.4rem);
-    font-style: normal;
-    letter-spacing: 0;
-    color: #fff;
-    text-shadow:
-      0 0.08rem 0 #ffffff,
-      0 0 0.9rem rgba(255, 255, 255, 0.86);
+@layer components {
+  @media (min-width: 768px) {
+    .section-cover-desktop {
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+    }
   }
 }
 

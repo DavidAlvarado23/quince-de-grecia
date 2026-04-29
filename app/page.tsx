@@ -7,6 +7,7 @@ import Image from "next/image";
 import CheckIcon from "@mui/icons-material/Check";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import { AudioPlayer } from "react-audio-play";
+import { SectionCover } from "./section-cover";
 
 export const image_path = "url('/background.png')";
 export const image_mobile_path = "url('/images/fairytale-invitation-bg.png')";
@@ -22,24 +23,8 @@ export default function Home() {
 
   return (
     <div className="flex flex-col items-center justify-center">
-      <AudioPlayer
-        src="/so_this_is_love.mp3"
-        autoPlay
-        loop
-        color="var(--ink-soft)"
-        width={"92%"}
-        style={{
-          position: "absolute",
-          bottom: "3%",
-          right: "4%",
-          height: "5%",
-          background: "transparent",
-        }}
-      />
-      {/* Mobile layout */}
-      <div className="w-[92%] h-[95dvh] border-5 border-ink-soft absolute left-50% top-5" />
       <div
-        className="w-full h-[100dvh] flex flex-row justify-center items-center"
+        className="w-full min-h-[100vh] flex flex-row justify-center items-center"
         style={{
           backgroundImage:
             "linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url('/images/fairytale-invitation-bg.png')",
@@ -48,9 +33,9 @@ export default function Home() {
           backgroundPositionX: "50%",
         }}
       >
-        <div className="max-w-[80%] flex flex-col items-center justify-center">
+        <div className="m-5 pr-5 pl-5 flex flex-col items-center justify-center border-5 border-ink-soft">
           <p
-            className="font-(family-name:--font-cormorant) text-[1em] font-bold leading-[100%] pt-5 pb-10 uppercase text-center"
+            className="font-(family-name:--font-cormorant) text-[1em] font-bold leading-[100%] pt-10 pb-10 uppercase text-center"
             style={{ textShadow: "1px 1px 20px white" }}
           >
             Como en un cuento de hadas, hay momentos que marcan nuestra
@@ -116,27 +101,32 @@ export default function Home() {
               Por favor, confirmar antes del 2 de mayo
             </p>
           </div>
+          <AudioPlayer
+            src="/so_this_is_love.mp3"
+            autoPlay
+            loop
+            color="var(--ink-soft)"
+            width={"100%"}
+            style={{
+              zIndex: 2,
+              background: "transparent",
+              marginTop: "auto",
+              boxShadow: "none",
+            }}
+          />
         </div>
       </div>
-      <div className="w-[92%] h-[105dvh] border-l-5 border-r-5 border-white absolute left-50% top-[100dvh]" />
-      <div
-        className="h-[100dvh] w-full flex flex-col justify-end items-center p-5"
-        style={{
-          backgroundImage: "url('/imagen_3.jpeg')",
-          backgroundAttachment: "fixed",
-          backgroundSize: "cover",
-          backgroundPositionX: "50%",
-          backgroundPositionY: "65%",
-        }}
-      >
-        &nbsp;
-      </div>
+      <SectionCover src="/imagen_3.jpeg" objectPosition="50% 65%">
+        <div className="border-l-5 border-r-5 border-white h-full w-full">
+          &nbsp;
+        </div>
+      </SectionCover>
       <div className="pt-3 pb-7">
         <div className="w-full flex items-center justify-center pb-3">
           <Image
             src="/images/fairytale-assets/clock.png"
             width={180}
-            height={50}
+            height={180}
             alt="Castillo"
           />
         </div>
@@ -145,18 +135,7 @@ export default function Home() {
         </p>
         <Countdown />
       </div>
-
-      <div
-        className="h-[100dvh] w-full flex flex-col justify-end items-center p-5"
-        style={{
-          backgroundImage: "url('/imagen_2.jpeg')",
-          backgroundAttachment: "fixed",
-          backgroundSize: "cover",
-          backgroundPositionX: "50%",
-        }}
-      >
-        &nbsp;
-      </div>
+      <SectionCover src="/imagen_2.jpeg" objectPosition="0 50%" />
       <div className="pt-7 pr-7 pl-7 pb-3">
         <h4 className="font-(family-name:--font-tangerine) text-[4em] leading-[40%] mt-5 mb-5 text-center">
           Ubicación
@@ -253,7 +232,7 @@ export default function Home() {
             src="/images/fairytale-assets/carriage.png"
             width={100}
             height={50}
-            alt="Tacón"
+            alt="Carruaje"
             style={{ transform: "scaleX(-1)" }}
           />
           <div>
@@ -265,18 +244,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div
-        className="h-[100dvh] w-full flex flex-col justify-end items-center p-5"
-        style={{
-          backgroundImage: "url('/imagen_1.jpeg')",
-          backgroundAttachment: "fixed",
-          backgroundSize: "cover",
-          backgroundPositionX: "50%",
-          backgroundPositionY: "25%",
-        }}
-      >
-        &nbsp;
-      </div>
+      <SectionCover src="/imagen_1.jpeg" objectPosition="50% 25%" />
     </div>
   );
 }
