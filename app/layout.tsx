@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ThemeProvider } from "@mui/material";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 import { fonts } from "./fonts";
 import theme from "./theme";
@@ -17,6 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
+      <GoogleAnalytics gaId="G-MX6D6F1V5S" />
       <body className={`${fonts}`}>
         <ThemeProvider theme={theme}>{children}</ThemeProvider>
       </body>
