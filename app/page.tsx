@@ -6,6 +6,7 @@ import { Button } from "@mui/material";
 import Image from "next/image";
 import CheckIcon from "@mui/icons-material/Check";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
+import { AudioPlayer } from "react-audio-play";
 
 export const image_path = "url('/background.png')";
 export const image_mobile_path = "url('/images/fairytale-invitation-bg.png')";
@@ -21,6 +22,20 @@ export default function Home() {
 
   return (
     <div className="flex flex-col items-center justify-center">
+      <AudioPlayer
+        src="/so_this_is_love.mp3"
+        autoPlay
+        loop
+        color="var(--ink-soft)"
+        width={"92%"}
+        style={{
+          position: "absolute",
+          bottom: "3%",
+          right: "4%",
+          height: "5%",
+          background: "transparent",
+        }}
+      />
       {/* Mobile layout */}
       <div className="w-[92%] h-[95dvh] border-5 border-ink-soft absolute left-50% top-5" />
       <div
