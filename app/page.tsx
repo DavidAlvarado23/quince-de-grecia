@@ -6,7 +6,7 @@ import { Button } from "@mui/material";
 import Image from "next/image";
 import CheckIcon from "@mui/icons-material/Check";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
-import { AudioPlayer } from "react-audio-play";
+import PlayPauseAudio from "./play_audio";
 import { SectionCover } from "./section-cover";
 
 export const image_path = "url('/background.png')";
@@ -24,60 +24,99 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center">
       <div
-        className="w-full min-h-[100vh] flex flex-row justify-center items-center"
+        className="max-w-[100vw] min-h-[95vh] flex flex-row justify-center items-center"
         style={{
+          overflowX: "clip",
           backgroundImage:
-            "linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url('/images/fairytale-invitation-bg.png')",
+            "linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url('/background.png')",
           backgroundAttachment: "initial",
           backgroundSize: "cover",
           backgroundPosition: "50% 0",
         }}
       >
-        <div className="m-5 pr-5 pl-5 flex flex-col items-center justify-center border-5 border-ink-soft">
-          <p
+        <PlayPauseAudio />
+        <Image
+          src={"/corner-roses.png"}
+          width={350}
+          height={350}
+          alt="Rosas"
+          style={{
+            zIndex: 3,
+            position: "absolute",
+            bottom: -100,
+            left: -110,
+            transform: "rotate(-90deg)",
+          }}
+        />
+        <Image
+          src={"/corner-roses.png"}
+          width={350}
+          height={350}
+          alt="Rosas"
+          style={{
+            zIndex: 3,
+            position: "absolute",
+            top: -100,
+            left: -110,
+          }}
+        />
+        <div className="min-h-[95vh] m-5 pr-5 pl-5 flex flex-col items-center justify-center border-1 border-ink-soft">
+          {/* <p
             className="font-(family-name:--font-cormorant) text-[1em] font-bold leading-[100%] pt-10 pb-10 uppercase text-center"
             style={{ textShadow: "1px 1px 20px white" }}
           >
             Como en un cuento de hadas, hay momentos que marcan nuestra
             historia... hoy comienza el mío y quiero que seas parte de él
-          </p>
-
+          </p> */}
+          <Image
+            src={"/images/fairytale-assets/castle.png"}
+            width={150}
+            height={150}
+            alt="Castillo"
+            style={{
+              zIndex: 3,
+              marginBottom: "5vh",
+            }}
+          />
           <p
-            className="font-(family-name:--font-cormorant) text-[1.1em] italic leading-[100%] text-center pl-5 pr-5"
+            className="font-(family-name:--font-cormorant) text-[1em] leading-[100%] uppercase text-center pl-5 pr-5"
             style={{ textShadow: "1px 1px 20px white" }}
           >
             Con la bendición de Dios
-            <br />y el amor de mis padres,
+            <br />y el amor de sus padres,
           </p>
-          <div className="flex flex-row p-5 gap-5 pb-10">
-            <h2 className="font-(family-name:--font-tangerine) text-[2.3em] text-(--ink-soft) leading-[80%] text-center ">
-              Jaime Hernández
-            </h2>
-            <h2 className="font-(family-name:--font-tangerine) text-[2.3em] text-(--ink-soft) leading-[80%] text-center">
+          {/* <div className="flex flex-row p-5 gap-5 pb-10"> */}
+          <h2 className="font-(family-name:--font-tangerine) text-[2em] text-(--ink-soft) leading-[80%] text-center pt-2 pb-2 w-full">
+            Jaime y Rubia Hernández
+          </h2>
+          {/* <h2 className="font-(family-name:--font-tangerine) text-[2.3em] text-(--ink-soft) leading-[80%] text-center">
               Rubia de Hernández
-            </h2>
-          </div>
-          <p className="font-(family-name:--font-cormorant) text-[1.1em] italic leading-[100%] text-center mb-5 pl-5 pr-5">
-            tengo el honor de invitarte a celebrar mis
+            </h2> */}
+          {/* </div> */}
+          <p className="font-(family-name:--font-cormorant) text-[1em] leading-[100%] text-center uppercase mb-5">
+            tengo el honor de invitarte a celebrar los
           </p>
-          <h5 className="font-(family-name:--font-cormorant) text-[1.5em] font-bold text-(--ink-soft) leading-[100%] tracking-[-3%] text-center mb-2">
-            XV AÑOS
+          <h5 className="font-(family-name:--font-tangerine) text-[4em] text-(--ink-soft) leading-[100%] tracking-[-3%] text-center mb-2">
+            Quince Años
           </h5>
-          <h1 className="font-(family-name:--font-tangerine) text-[5.5em] text-(--ink-soft) leading-[60%] tracking-[-3%] text-center pl-5 pr-5 pb-5">
+          <p className="font-(family-name:--font-cormorant) text-[1em] leading-[100%] text-center uppercase mb-7">
+            de su querida hija
+          </p>
+          <h1 className="font-(family-name:--font-tangerine) text-[6em] text-(--ink-soft) leading-[60%] tracking-[-3%] text-center pb-5">
             Grecia Hernández
           </h1>
           <div className="flex flex-row items-center justify-center gap-2 pl-5 pr-5 mt-5">
-            <p className="font-(family-name:--font-cormorant) text-[1.5em] font-bold text-center ">
+            <p className="font-(family-name:--font-cormorant) text-[1.5em] text-(--ink-soft) font-bold text-center ">
               sábado
             </p>
-            <p className="font-(family-name:--font-montserrat) text-[2.5em] text-center ">
+            <p className="font-(family-name:--font-montserrat) text-[2.5em] text-(--ink-soft) text-center ">
               16
             </p>
-            <p className="font-(family-name:--font-cormorant) text-[1.5em] font-bold text-center">
+            <p className="font-(family-name:--font-cormorant) text-[1.5em] text-(--ink-soft) font-bold text-center">
               mayo
             </p>
           </div>
-          <div className="mb-[3vh] md:w-[40%] w-[70vw]">
+          <div className="mb-[3vh] md:w-[40%] w-[70vw] mt-5">
             <Button
               variant="outlined"
               fullWidth
@@ -101,19 +140,22 @@ export default function Home() {
               Por favor, confirmar antes del 2 de mayo
             </p>
           </div>
-          <AudioPlayer
+
+          {/* <AudioPlayer
             src="/so_this_is_love.mp3"
             autoPlay
             loop
             color="var(--ink-soft)"
             width={"100%"}
             style={{
+              padding: 0,
               zIndex: 2,
+              height: "80px",
               background: "transparent",
               marginTop: "auto",
               boxShadow: "none",
             }}
-          />
+          /> */}
         </div>
       </div>
       <SectionCover src="/imagen_3.jpeg" objectPosition="50% 65%">
@@ -245,6 +287,32 @@ export default function Home() {
         </div>
       </div>
       <SectionCover src="/imagen_1.jpeg" objectPosition="50% 25%" />
+      <div className="w-full p-7 flex flex-col items-center justify-center">
+        <div className="w-[90vw]">
+          <Button
+            variant="outlined"
+            fullWidth
+            style={{
+              backgroundColor: "var(--ink-soft)",
+              color: "white",
+              fontFamily: "var(--font-montserrat)",
+              textTransform: "none",
+              fontSize: "1em",
+              fontWeight: "bold",
+              padding: "5px",
+              borderRadius: "50px",
+              borderColor: "var(--ink-soft)",
+            }}
+            onClick={onRsvp}
+            startIcon={<CheckIcon />}
+          >
+            Confirmar asistencia
+          </Button>
+          <p className="font-(family-name:--font-cormorant) font-bold italic text-[0.9em] leading-[70%] mt-2 tracking-[-2%] text-center">
+            Por favor, confirmar antes del 2 de mayo
+          </p>
+        </div>
+      </div>
     </div>
   );
 }
