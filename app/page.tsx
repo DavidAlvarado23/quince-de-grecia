@@ -158,11 +158,16 @@ export default function Home() {
           /> */}
         </div>
       </div>
-      <SectionCover src="/imagen_3.jpeg" objectPosition="50% 65%">
-        <div className="border-l-5 border-r-5 border-white h-full w-full">
-          &nbsp;
-        </div>
-      </SectionCover>
+      <SectionCover src="/imagen_3.jpeg" objectPosition="50% 65%" />
+      <div className="flex items-center justify-center p-7 bg-ink-soft w-full">
+        <p className="font-(family-name:--font-tangerine) text-[3em] text-white leading-[80%] tracking-[0%] text-center ">
+          Nuestra princesa
+          <br />
+          desde pequeña
+        </p>
+      </div>
+      <SectionCover src="/imagen_5.jpeg" objectPosition="50% 65%" />
+
       <div className="pt-3 pb-7">
         <div className="w-full flex items-center justify-center pb-3">
           <Image
