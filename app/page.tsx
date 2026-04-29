@@ -22,9 +22,9 @@ export default function Home() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div className="flex flex-col items-center justify-center max-w-[100vw]">
       <div
-        className="max-w-[100vw] relative min-h-[95vh] flex flex-row justify-center items-center"
+        className="w-full relative min-h-[95vh] flex flex-row justify-center items-center"
         style={{
           overflowX: "clip",
           backgroundImage:
