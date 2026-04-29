@@ -24,7 +24,7 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center">
       <div
-        className="max-w-[100vw] min-h-[95vh] flex flex-row justify-center items-center"
+        className="max-w-[100vw] relative min-h-[95vh] flex flex-row justify-center items-center"
         style={{
           overflowX: "clip",
           backgroundImage:
@@ -37,27 +37,27 @@ export default function Home() {
         <PlayPauseAudio />
         <Image
           src={"/corner-roses.png"}
-          width={350}
-          height={350}
+          width={300}
+          height={300}
           alt="Rosas"
           style={{
             zIndex: 3,
             position: "absolute",
-            bottom: -110,
-            left: -110,
+            bottom: -90,
+            left: -100,
             transform: "rotate(-90deg)",
           }}
         />
         <Image
           src={"/corner-roses.png"}
-          width={350}
-          height={350}
+          width={300}
+          height={300}
           alt="Rosas"
           style={{
             zIndex: 3,
             position: "absolute",
             top: -100,
-            left: -110,
+            left: -90,
           }}
         />
         <div className="min-h-[95vh] m-5 pr-5 pl-5 flex flex-col items-center justify-center border-1 border-ink-soft">
@@ -102,7 +102,7 @@ export default function Home() {
           <p className="font-(family-name:--font-cormorant) text-[0.5em] leading-[100%] text-center uppercase">
             &nbsp;
           </p>
-          <h1 className="font-(family-name:--font-tangerine) text-[6em] text-(--ink-soft) leading-[60%] tracking-[-3%] text-center pb-1">
+          <h1 className="font-(family-name:--font-tangerine) text-[5em] text-(--ink-soft) leading-[60%] tracking-[-3%] text-center pb-1">
             Grecia Hernández
           </h1>
           <div className="flex flex-row items-center justify-center gap-2 pl-5 pr-5 mt-2">
@@ -116,7 +116,7 @@ export default function Home() {
               mayo
             </p>
           </div>
-          <div className="mb-[3vh] md:w-[40%] w-[70vw] mt-5">
+          <div className="mb-[3vh] md:w-[40%] w-[70vw] mt-5 z-4">
             <Button
               variant="outlined"
               fullWidth
@@ -130,6 +130,7 @@ export default function Home() {
                 padding: "5px",
                 borderRadius: "50px",
                 borderColor: "var(--ink-soft)",
+                zIndex: 4,
               }}
               onClick={onRsvp}
               startIcon={<CheckIcon />}
