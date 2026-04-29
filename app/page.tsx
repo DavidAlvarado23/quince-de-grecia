@@ -2,7 +2,7 @@
 
 import Countdown from "./countdown";
 import "./globals.css";
-import { Button } from "@mui/material";
+import { Button, Divider } from "@mui/material";
 import Image from "next/image";
 import CheckIcon from "@mui/icons-material/Check";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
@@ -43,7 +43,7 @@ export default function Home() {
           style={{
             zIndex: 3,
             position: "absolute",
-            bottom: -100,
+            bottom: -110,
             left: -110,
             transform: "rotate(-90deg)",
           }}
@@ -61,13 +61,6 @@ export default function Home() {
           }}
         />
         <div className="min-h-[95vh] m-5 pr-5 pl-5 flex flex-col items-center justify-center border-1 border-ink-soft">
-          {/* <p
-            className="font-(family-name:--font-cormorant) text-[1em] font-bold leading-[100%] pt-10 pb-10 uppercase text-center"
-            style={{ textShadow: "1px 1px 20px white" }}
-          >
-            Como en un cuento de hadas, hay momentos que marcan nuestra
-            historia... hoy comienza el mío y quiero que seas parte de él
-          </p> */}
           <Image
             src={"/images/fairytale-assets/castle.png"}
             width={150}
@@ -75,9 +68,13 @@ export default function Home() {
             alt="Castillo"
             style={{
               zIndex: 3,
-              marginBottom: "5vh",
+              marginBottom: "2vh",
             }}
           />
+          <p className="font-(family-name:--font-cormorant) text-[0.9em] leading-[100%] pb-5 pl-2 pr-2 italic tracking-[5%] uppercase text-center">
+            Como en un cuento de hadas, hay momentos que marcan nuestra
+            historia... hoy comienza el mío y quiero que seas parte de él
+          </p>
           <p
             className="font-(family-name:--font-cormorant) text-[1em] leading-[100%] uppercase text-center pl-5 pr-5"
             style={{ textShadow: "1px 1px 20px white" }}
@@ -85,27 +82,30 @@ export default function Home() {
             Con la bendición de Dios
             <br />y el amor de sus padres,
           </p>
-          {/* <div className="flex flex-row p-5 gap-5 pb-10"> */}
-          <h2 className="font-(family-name:--font-tangerine) text-[2em] text-(--ink-soft) leading-[80%] text-center pt-2 pb-2 w-full">
-            Jaime y Rubia Hernández
-          </h2>
-          {/* <h2 className="font-(family-name:--font-tangerine) text-[2.3em] text-(--ink-soft) leading-[80%] text-center">
+          <div className="flex flex-row items-center p-5 gap-5 pb-5">
+            <h2 className="font-(family-name:--font-tangerine) text-[2em] text-(--ink-soft) leading-[80%] text-center">
+              Jaime Hernández
+            </h2>
+            <h2 className="font-(family-name:--font-tangerine) text-[2em] text-(--ink-soft) leading-[80%] text-center">
+              y
+            </h2>
+            <h2 className="font-(family-name:--font-tangerine) text-[2.3em] text-(--ink-soft) leading-[80%] text-center">
               Rubia de Hernández
-            </h2> */}
-          {/* </div> */}
+            </h2>
+          </div>
           <p className="font-(family-name:--font-cormorant) text-[1em] leading-[100%] text-center uppercase mb-5">
-            tengo el honor de invitarte a celebrar los
+            tengo el honor de invitarte a celebrar mis
           </p>
-          <h5 className="font-(family-name:--font-tangerine) text-[4em] text-(--ink-soft) leading-[100%] tracking-[-3%] text-center mb-2">
-            Quince Años
+          <h5 className="font-(family-name:--font-cormorant) text-[2em] text-(--ink-soft) uppercase leading-[100%] text-center">
+            XV Años
           </h5>
-          <p className="font-(family-name:--font-cormorant) text-[1em] leading-[100%] text-center uppercase mb-7">
-            de su querida hija
+          <p className="font-(family-name:--font-cormorant) text-[0.5em] leading-[100%] text-center uppercase">
+            &nbsp;
           </p>
-          <h1 className="font-(family-name:--font-tangerine) text-[6em] text-(--ink-soft) leading-[60%] tracking-[-3%] text-center pb-5">
+          <h1 className="font-(family-name:--font-tangerine) text-[6em] text-(--ink-soft) leading-[60%] tracking-[-3%] text-center pb-1">
             Grecia Hernández
           </h1>
-          <div className="flex flex-row items-center justify-center gap-2 pl-5 pr-5 mt-5">
+          <div className="flex flex-row items-center justify-center gap-2 pl-5 pr-5 mt-2">
             <p className="font-(family-name:--font-cormorant) text-[1.5em] text-(--ink-soft) font-bold text-center ">
               sábado
             </p>
