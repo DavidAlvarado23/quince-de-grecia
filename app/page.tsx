@@ -80,7 +80,7 @@ export default function Home() {
             style={{ textShadow: "1px 1px 20px white" }}
           >
             Con la bendición de Dios
-            <br />y el amor de sus padres,
+            <br />y el amor de mis padres,
           </p>
           <div className="flex flex-row items-center p-5 gap-5 pb-5">
             <h2 className="font-(family-name:--font-tangerine) text-[2em] text-(--ink-soft) leading-[80%] text-center">
@@ -191,7 +191,7 @@ export default function Home() {
         <div
           className="flex flex-col items-start mb-7"
           onClick={() =>
-            window.open("https://maps.app.goo.gl/gjdQcKA2YHtSVdkP9", "_blank")
+            window.open("https://ul.waze.com/ul?venue_id=177471625.1774454106.6841765&overview=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location", "_blank")
           }
         >
           <h4 className="font-(family-name:--font-cormorant) font-bold text-[1.8em] tracking-[-2%]">
@@ -217,7 +217,7 @@ export default function Home() {
         <div
           className="flex flex-col items-start"
           onClick={() =>
-            window.open("https://maps.app.goo.gl/M5NDKG8ymnaH19ri8", "_blank")
+            window.open("https://ul.waze.com/ul?venue_id=177471625.1774454105.325146&overview=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location", "_blank")
           }
         >
           <h4 className="font-(family-name:--font-cormorant) font-bold text-[1.8em] tracking-[-2%]">

@@ -27,7 +27,7 @@ export default function PlayPauseAudio() {
         text-white shadow-none hover:bg-green hover:opacity-90
         bottom-4 right-4"
     >
-      <audio src={"/so_this_is_love.mp3"} muted={false} ref={ref}></audio>
+      <audio src={"/so_this_is_love.mp3"} muted={false} loop ref={ref}></audio>
       {!isPlaying && <PlayArrow fontSize="large" color="info" />}
       {isPlaying && <PauseButton fontSize="large" color="info" />}
     </div>
