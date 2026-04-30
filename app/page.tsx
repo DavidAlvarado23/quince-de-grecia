@@ -125,7 +125,7 @@ export default function Home() {
                 color: "white",
                 fontFamily: "var(--font-montserrat)",
                 textTransform: "none",
-                fontSize: "0.8em",
+                fontSize: "1em",
                 fontWeight: "bold",
                 padding: "5px",
                 borderRadius: "50px",
@@ -137,7 +137,7 @@ export default function Home() {
             >
               Confirmar asistencia
             </Button>
-            <p className="font-(family-name:--font-cormorant) font-bold italic text-[0.9em] leading-[70%] mt-2 tracking-[-2%] text-center">
+            <p className="font-(family-name:--font-cormorant) font-bold italic text-[1.2em] leading-[70%] mt-2 tracking-[-2%] text-center">
               Por favor, confirmar antes del 2 de mayo
             </p>
           </div>
@@ -303,18 +303,18 @@ export default function Home() {
               color: "white",
               fontFamily: "var(--font-montserrat)",
               textTransform: "none",
-              fontSize: "1em",
+              fontSize: "1.2em",
               fontWeight: "bold",
               padding: "5px",
               borderRadius: "50px",
               borderColor: "var(--ink-soft)",
             }}
             onClick={onRsvp}
-            startIcon={<CheckIcon />}
+            startIcon={<CheckIcon fontSize="large"/>}
           >
             Confirmar asistencia
           </Button>
-          <p className="font-(family-name:--font-cormorant) font-bold italic text-[0.9em] leading-[70%] mt-2 tracking-[-2%] text-center">
+          <p className="font-(family-name:--font-cormorant) font-bold italic text-[1.3em] leading-[70%] mt-2 tracking-[-2%] text-center">
             Por favor, confirmar antes del 2 de mayo
           </p>
         </div>
