@@ -83,7 +83,7 @@ export default function Home() {
             <br />y el amor de mis padres,
           </p>
           <div className="flex flex-row items-center p-5 gap-5 pb-5">
-            <h2 className="font-(family-name:--font-tangerine) text-[2em] text-(--ink-soft) leading-[80%] text-center">
+            <h2 className="font-(family-name:--font-tangerine) text-[2.3em] text-(--ink-soft) leading-[80%] text-center">
               Jaime Hernández
             </h2>
             <h2 className="font-(family-name:--font-tangerine) text-[2em] text-(--ink-soft) leading-[80%] text-center">
